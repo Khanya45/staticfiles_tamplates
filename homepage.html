@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME</title>
+</head>
+<style type="text/css">
+    body{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        height:70vh;
+    }
+
+    h1{
+        margin-bottom:100px;
+    }
+
+    th:tr{
+        color: blue;
+
+    }
+    tr:nth-of-type(2n){
+        border: 1px solid black;
+        background-color: rgba(150, 150, 150, 0.5);
+
+    }
+
+    td{
+        padding: 8px 8px;
+        border: 1px solid black;
+    }
+</style>
+<body>
+    <h1>WELCOME TO HABITUATE READING</h1>
+    <h2>HABITUATE READING Student Details</h2>
+
+<table style="margin-left: 20px;">
+<!-- Table headers -->
+    <th>
+        <tr style="color: green; ">
+        <td>Student Name</td>
+        <td>Student Age</td>
+</tr>
+    </th>
+
+<!-- For loop logic of jinja template -->
+{%for key in student_ages%}
+
+<!-- table rows -->
+<tr>
+    <td>{{key}}</td>
+    <td>{{student_ages[key]}}</td>
+
+{%endfor%}
+
+</tr>
+
+</table>
+
+
+
+</body>
+</html>
